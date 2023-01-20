@@ -1,8 +1,16 @@
 // Business Logic
 
 function beepBoop(number){
-  const word = "Beep!"
-  if (number === 1){
-  return word;
+  let numArray = number.toString().split("");
+  for (let i = 0; i < numArray.length; i++){
+    if (numArray[i] === "1") {
+      numArray[i] = "Beep!";
+    }
   }
+  return numArray;
+}
+
+// UI Logic
+function handleForm(event) {
+  event.preventDefault();
 }
